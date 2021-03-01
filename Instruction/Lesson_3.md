@@ -38,6 +38,12 @@ The `base_url` for the Met API will always be the same, so we can declare a vari
 met_base = 'https://collectionapi.metmuseum.org/public/collection/v1'
 ```
 
+To see an API response for an artwork in a browser you can look at
+
+https://collectionapi.metmuseum.org/public/collection/v1/objects/774336
+
+We will be taking each ID and forming a GET request like this, processing the JSON to get some key information, and then sending that to Sheet2 of our Google Sheet.
+
 (MORE TK)
 
 [<<< Previous](Lesson_2.md) | [Next >>>](Lesson_4.md)

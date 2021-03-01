@@ -122,4 +122,4 @@ python lesson_1.py
 Note that your API credentials (`credentials.json` and `token.json`) can be reused in other environments where `sheetFeeder` is installed without repeating the steps above. You may copy them to the appropriate location per step 2 above. To disallow API access and reset to the initial state, simply delete the files. You may also manage API access via the [Google API console](https://console.developers.google.com/).
 
 
-[Next >>>](lesson_2.md)
+[Next >>>](Lesson_2.md)

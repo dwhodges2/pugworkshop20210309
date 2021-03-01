@@ -19,7 +19,24 @@ Add some test data to your sheet:
 
 ![Enable API button](../images/googleapi-sheet1.png)
 
-Now run `lesson_2.py`. You should first get your original test data as a result; then some more data will be added automatically; then you will get the combined result. You will see that this is done by using methods defined for the `dataSheet` class you created for your sheet:
+Now run `lesson_2.py`. You should first get your original test data as a result; then some more data will be added automatically; then you will get the combined result. 
+
+```
+Getting data from the sheet...
+[['a', 'b', 'c'], ['1', '2', '3']]
+
+Getting data as columns...
+[['a', '1'], ['b', '2'], ['c', '3']]
+
+Append some data ...
+{'spreadsheetId': '1uJZ5eqjrqdzs0P_8tvePIK4MGn0a9_RGmJtBda_KrOs', 'tableRange': 'Sheet1!A1:C2', 'updates': {'spreadsheetId': '1uJZ5eqjrqdzs0P_8tvePIK4MGn0a9_RGmJtBda_KrOs', 'updatedRange': 'Sheet1!A3:C5', 'updatedRows': 3, 'updatedColumns': 3, 'updatedCells': 9}}
+
+The new data looks like...
+[['a', 'b', 'c'], ['1', '2', '3'], ['x', 'y', 'z'], ['12', '', 'Hello'], ['55', '34', 'c']]
+```
+
+
+You will see that this is done by using methods defined for the `dataSheet` class you created for your sheet:
 
  - `.getData()` returns the data for the given range in a list of rows
  - `.getDataColumns()` returns the same data as a list of columns

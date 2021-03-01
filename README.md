@@ -43,3 +43,4 @@ conda install pip
 (More instructions for conda and pip setup here)
 
 
+[Go to Lesson 1 >>>](Instruction/Lesson_1.md)
