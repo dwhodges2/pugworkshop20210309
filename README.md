@@ -27,20 +27,14 @@ Any plain text editor will do, but use of an IDE or code editor with syntax high
 
 Chances are good that you already have Python installed on your computer, but the version is important. We require Python 3.4 or later. An easy way to ensure you have the latest Python installed is to use Anaconda, which bundles Python with many useful packages and utilities.
 
-#### Installing `conda` and `pip`
+#### Installing Anaconda
 
-You can skip this section if you already have Conda set up and working, or have another working Python3 environment with pip installed.
+You can skip this section if you already have Anaconda set up and working, or have another working Python3 environment available. You will need to be able to use `conda` the command prompt, and also be able to execute python scripts from the command line. 
 
 Find instructions for your platform here:
 https://conda.io/projects/conda/en/latest/user-guide/install/index.html
 
-Your installation of conda may already have `pip` installed. To install, use
-
-```
-conda install pip
-```
-
-(More instructions for conda and pip setup here)
+See Lesson 1 for more information on configuring Anaconda and Pip.
 
 
 [Go to Lesson 1 >>>](Instruction/Lesson_1.md)
