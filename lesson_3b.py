@@ -34,6 +34,3 @@ data2 = pf.dataframe_to_datasheet(df)
 # Post back to sheet, replacing data
 the_sheet.clear()
 the_sheet.appendData(data2)
-# quit()
-
-print("")
