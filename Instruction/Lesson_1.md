@@ -90,7 +90,7 @@ To begin using the Google Sheets API you need to obtain a `credentials.json` fil
 
 - You will need to click through a few questions. You can leave the default application name as "Quickstart", and if asked select the "Desktop app" option for your client. Click "Download Client Configuration" to obtain your credentials JSON file.
 
-  ![Enable API button](../images/googleapi-credentials.png)
+  ![Download credentials](../images/googleapi-credentials.png)
 
 - Move the `credentials.json` in the `sheetFeeder` package location as identified in step 2 above. Depending on your locations, the command may look like
 
@@ -112,7 +112,7 @@ python lesson_1.py
 
 - This should pop open a browser window asking you to select the Google identity to use (if more than one are detected) and to verify access.  Note that you may see a warning that the application is not verified by Google. You can go to the "advanced" option and proceed with the "Quickstart" authentication process from there.
 
-  ![Enable API button](../images/googleapi-select.png)
+  ![Authenticate and grant permission](../images/googleapi-select.png)
 
 - Click through to grant read/write permission to your Google Sheets account. You should see a message saying "The authentication flow has completed."
 - If successful, a `token.json` file should be created in the same folder as the `credentials.json` file (see step 2 above for location), and a brief readout of sample table data will appear in your terminal. Once the credentials and token are in place, you be able to access sheets via the API without additional steps; you can verify this by running `lesson_1.py` again—you should get the read-out without the authentication steps. 

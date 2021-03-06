@@ -1,16 +1,15 @@
 # Python User Group Workshop: Working with the Google Sheets API in Python
 
-*NOTE: WORK IN PROGRESS. PAY NO MIND!*
 
 _9 March 2021_
 
-https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bb9e24-778608d8-0177-8797ff99-00004e41events@columbia.edu&recurrenceId=
+[Link to course description.](https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bb9e24-778608d8-0177-8797ff99-00004e41events@columbia.edu&recurrenceId=)
 
 ## Introduction
 
-This workshop introduces participants to the Google Sheets API (Application Programming Interface) and some tools and techniques to use it for data-focussed projects.
+This workshop introduces participants to the [Google Sheets API](https://developers.google.com/sheets/api) and some tools and techniques to use it for data-focussed projects.
 
-The Google Sheets API allows one to read from, write to, and otherwise interact with Google Sheets via Python and other languages. The workshop will introduce the API, provide some sample code and data to work with, and walk through a few use cases. The workshop does not presuppose an advanced understanding either of Python or APIs, but it does require some local setup of your environment in order to be able to participate fully. See the "Setup" section below.
+The Google Sheets API (Application Programming Interface) allows one to read from, write to, and otherwise interact with Google Sheets via Python and other languages. The workshop will introduce the API, provide some sample code and data to work with, and walk through a few use cases. The workshop does not presuppose an advanced understanding either of Python or APIs, but it does require some local setup of your environment in order to be able to participate fully. See the "Setup" section below.
 
 ## Setup
 
@@ -22,6 +21,17 @@ Requirements:
  * Ability to create a local folder, edit scripts in the folder using a text editor, and ability to run the script from a terminal command prompt (e.g., a bash shell on Mac OS or Linux, or the Anaconda powershell prompt on Windows).
 
 Any plain text editor will do, but use of an IDE or code editor with syntax highlighting and formatting is highly recommended, e.g., VSCode, PyCharm, or Atom.
+
+
+### Get the Workshop Files
+
+Download the files in this repo to a local folder. If you are able to use `git`, you can do so by using:
+
+```
+git clone git@github.com:dwhodges2/pugworkshop20210309.git
+```
+
+You can also download it as a Zip file from the [repo page](https://github.com/dwhodges2/pugworkshop20210309) and un-zip it to a local directory. 
 
 ### Python Environment
 

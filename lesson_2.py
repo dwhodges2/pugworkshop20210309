@@ -1,10 +1,10 @@
 from sheetFeeder import dataSheet
 
-# Replace with the UID of your sheet.
-sheet_id = 'xxxxxxxxxxxxxxxxx'
+# Replace with the UID of your sheet:
 sheet_id = '1uJZ5eqjrqdzs0P_8tvePIK4MGn0a9_RGmJtBda_KrOs'
-
-test_sheet = dataSheet(sheet_id, 'Sheet1!A:Z')
+sheet_range = 'Sheet1!A:Z'  # Should match the name of the tab
+# Create a dataSheet object
+test_sheet = dataSheet(sheet_id, sheet_range)
 
 print("Getting data from the sheet...")
 x = test_sheet.getData()
@@ -19,6 +19,9 @@ print("")
 print("Append some data ...")
 new_data = [['x', 'y', 'z'], [12, '', 'Hello'], ['055', 34, 'c']]
 x = test_sheet.appendData(new_data)
+
+print("")
+print("The API's response:")
 print(x)
 
 print("")
