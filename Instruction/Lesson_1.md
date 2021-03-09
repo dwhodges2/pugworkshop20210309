@@ -32,7 +32,7 @@ Although you may have `pip` installed, we want it installed specifically within 
 conda install -n pugenv pip
 ```
 
-Then verify that the version of `pip` is located in the pugenv environment:
+(If you have named your virtual environment differently, replace "pugenv" with the correct name.) Then verify that the version of `pip` is located in the pugenv environment:
 
 ```
 which pip
