@@ -81,22 +81,29 @@ Note the location response for the next step.
 
 ### 3. Obtain Google API credentials
 
+*(Note: These instructions have changed to reflect changes in the authorization process at Google, and are subject to change further.)*
+
 To begin using the Google Sheets API you need to obtain a `credentials.json` file.
 
-- Go to https://developers.google.com/sheets/api/quickstart/python. Make sure you are signed in as the Google identity you want to enable API access for. 
-- Click "Enable the Google Sheets API" button. Download the API credentials as `credentials.json`.
+- If you have not already done so, you must create a Google "project" and enable API access. The process is described in detail at https://developers.google.com/workspace/guides/create-project. Follow the steps to create a project and enable APIs and Services. 
+  - The name of the project is not very important.
+  - When you get to the page listing available APIs, select the Sheets API and click "Enable".
+- Once the Sheets API is enabled, follow [the instructions here](https://developers.google.com/workspace/guides/create-credentials) to create and download a credentials JSON file.
+  - After configuring the OAuth consent per the instructions, follow directions to create an OAuth client ID credential. 
+  - Use the instructions labeled "Create Desktop application credentials" to generate a JSON file. You can always return to the control panel to obtain the credentials file again if you lose it.
+- The downloaded file will be called something unwieldy like `client_secret_496925295403-5qcjroitnouj1xof810siou23k5goe7l.apps.googleusercontent.com.json`. You will need to rename this file (or a copy of it) to `credentials.json`:
 
-  ![Enable API button](../images/googleapi-enable.png)
+  ```
+  mv <name_of_client_secret_file> credentials.json
+  ```
 
-- You will need to click through a few questions. You can leave the default application name as "Quickstart", and if asked select the "Desktop app" option for your client. Click "Download Client Configuration" to obtain your credentials JSON file.
+  This will be your credentials file. You can duplicate it for other projects as needed.
 
-  ![Download credentials](../images/googleapi-credentials.png)
+- Place the `credentials.json` in the `sheetFeeder` package location as identified in step 2 above. Depending on your locations, the command may look like
 
-- Move the `credentials.json` in the `sheetFeeder` package location as identified in step 2 above. Depending on your locations, the command may look like
-
-```
-mv ~/Downloads/credentials.json /opt/anaconda3/envs/pugenv/lib/python3.9/site-packages/sheetFeeder/
-```
+  ```
+  mv ~/Downloads/credentials.json /opt/anaconda3/envs/pugenv/lib/python3.9/site-packages/sheetFeeder/
+  ```
 
 In that folder you should now see `credentials.json` alongside `sheetFeeder.py` and `__init__.py` (the installed package files).
 
@@ -106,9 +113,9 @@ The first time you attempt a request using your credentials you will be prompted
 
 - Run `lesson_1.py`, which attempts to read a Google Sheet that allows read access to all authenticated users. 
 
-```
-python lesson_1.py
-```
+  ```
+  python lesson_1.py
+  ```
 
 - This should pop open a browser window asking you to select the Google identity to use (if more than one are detected) and to verify access.  Note that you may see a warning that the application is not verified by Google. You can go to the "advanced" option and proceed with the "Quickstart" authentication process from there.
 
