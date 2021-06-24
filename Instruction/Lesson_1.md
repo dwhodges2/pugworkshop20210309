@@ -85,10 +85,11 @@ Note the location response for the next step.
 
 To begin using the Google Sheets API you need to obtain a `credentials.json` file.
 
-- If you have not already done so, you must create a Google "project" and enable API access. The process is described in detail at https://developers.google.com/workspace/guides/create-project. Follow the steps to create a project and enable APIs and Services. 
+- If you have not already done so, you must create a Google "project" and enable API access. The process is described in detail at https://developers.google.com/workspace/guides/create-project. Follow the steps to create a project in [Google Cloud Console](https://console.cloud.google.com/) and enable APIs and Services. 
   - The name of the project is not very important.
-  - When you get to the page listing available APIs, select the Sheets API and click "Enable".
+  - When you get to API Library page, select the Sheets API and click "Enable".
 - Once the Sheets API is enabled, follow [the instructions here](https://developers.google.com/workspace/guides/create-credentials) to create and download a credentials JSON file.
+  - Fill in your email address and other required information. You do not need to specify any custom scopes.
   - After configuring the OAuth consent per the instructions, follow directions to create an OAuth client ID credential. 
   - Use the instructions labeled "Create Desktop application credentials" to generate a JSON file. You can always return to the control panel to obtain the credentials file again if you lose it.
 - The downloaded file will be called something unwieldy like `client_secret_496925295403-5qcjroitnouj1xof810siou23k5goe7l.apps.googleusercontent.com.json`. You will need to rename this file (or a copy of it) to `credentials.json`:
@@ -102,7 +103,7 @@ To begin using the Google Sheets API you need to obtain a `credentials.json` fil
 - Place the `credentials.json` in the `sheetFeeder` package location as identified in step 2 above. Depending on your locations, the command may look like
 
   ```
-  mv ~/Downloads/credentials.json /opt/anaconda3/envs/pugenv/lib/python3.9/site-packages/sheetFeeder/
+  mv credentials.json /opt/anaconda3/envs/pugenv/lib/python3.9/site-packages/sheetFeeder/
   ```
 
 In that folder you should now see `credentials.json` alongside `sheetFeeder.py` and `__init__.py` (the installed package files).
