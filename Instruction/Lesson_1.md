@@ -81,7 +81,7 @@ Note the location response for the next step.
 
 ### 3. Obtain Google API credentials
 
-*(Note: These instructions have changed to reflect changes in the authorization process at Google, and are subject to change further.)*
+*Note: Google has changed the way that API access is enabled, now requiring a more complicated but still very doable process. These instructions have been updated to reflect the current state of the authorization process (as of June 2021), which is subject to change further of course.*
 
 To begin using the Google Sheets API you need to obtain a `credentials.json` file.
 
@@ -90,9 +90,12 @@ A. *Select or Create a Project and Enable API*
 - If you do not already have a project in Google Cloud Console you will need to create one. The process of creating a new project is described in detail at https://developers.google.com/workspace/guides/create-project. 
 - Go to [Google Cloud Console](https://console.cloud.google.com/), making sure you are signed in as the identity you wish to use for Sheets integration.
 - You may either use an existing project (if you have one) or create a new one. To do either, go to the pull-down menu at the top and either select an existing project or select "New Project."
+
   ![Select or create a project](../images/googleapi-cloud.png)
+
 - If creating a new project, you can use the name assigned by Google if you like or create a new name (the name is not very important). If your account is part of an organization (e.g., a University) you may group it with that organization or leave it unassociated with an organization (it shouldn't matter).
 - With the project selected, go to APIs and Services in the main menu. In the Dashboard view, click "Enable APIS and Services" at the top. 
+
   ![Enable APIs](../images/googleapi-enable2.png)
 
   This will take you to the API library. Scroll to or search for the Google Sheets API and click through to enable it.
@@ -101,6 +104,7 @@ B. *Configure OAuth Consent Screen*
 - From the main menu go to > "APIs and Services" > "OAuth Consent Screen".
 - Select "Internal" or "External" User Type (this shouldn't matter much for our purposes) and click "Create".
 - App Information screen: You only need fill in the required fields (App name and email). Click "Save and Continue".
+
   ![OAuth consent screen](../images/googleapi-oauth.png)
 
 - Scopes screen: No need to change from the defaults here. Click "Save and Continue".
@@ -112,9 +116,11 @@ C. *Create Credentials*
 - From the "APIs and Services" menu on the left, select "Credentials".
 - Click "Create Credentials" and select the "OAuth client ID" option.
 - For Application Type select "Desktop" and give it the name "Quickstart". Click "Create".
+
   ![Create a desktop application](../images/googleapi-desktop-application.png)
 
 - You should now see the "Quickstart" credential listed under OAuth 2.0 Client IDs. Use the Download button at the right end of that row to download the credentials as a JSON file.
+
   ![Download credentials JSON](../images/googleapi-download-credentials.png)
 
 D. *Add Credentials to sheetFeeder*
